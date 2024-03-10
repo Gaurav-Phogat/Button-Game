@@ -31,7 +31,7 @@ $("button").on("click", function(){
     }
 });
 
-$("a").on("click", function(){
+$("#reset-id").on("click", function(){
     highScore = 0;
     localStorage.setItem("highScoreKey", highScore);
     $("#high-score").html("High Score : "+highScore);
