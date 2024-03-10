@@ -1,8 +1,5 @@
-body, html{
+html, body{
     height: 100%;
-}
-.cont {
-    height: 60%;
 }
 #game-name {
     font-size: 4rem;
@@ -11,12 +8,24 @@ body, html{
 }
 .cont > .btn {
     border-radius: 50%;
+    font-size: 40px;
     width:100px;
     height: 100px;
 }
-#reset {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: end;
+#reset { 
+    text-align: center;
+}
+
+.button-override{
+    font-size:18px !important;
+ }
+@media (min-width:800px){
+    html {
+        font-size: 25px;
+    }
+    .cont > .btn {
+        font-size: 80px;
+        width:200px;
+        height: 200px;
+    }
 }

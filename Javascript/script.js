@@ -3,6 +3,13 @@ var checkNum = 0;
 var highScore = localStorage.getItem("highScoreKey");
 $("#high-score").html("High Score : "+highScore);
 
+var buttonTextCheck = $("button").html();
+
+if(buttonTextCheck === "click me to begin!"){
+    console.log("does this work?");
+    $(".btn").addClass("button-override");
+}
+
 function probability() {
    var randomNum = (Math.floor(100*Math.random())) + 1;
   if(randomNum <= (100-count)){
@@ -17,6 +24,7 @@ function probability() {
 }
 
 $("button").on("click", function(){
+    $(".btn").removeClass("button-override");
     probability();
     if (checkNum === 1){
         count++;
@@ -31,7 +39,7 @@ $("button").on("click", function(){
     }
 });
 
-$("#reset-id").on("click", function(){
+$("a").on("click", function(){
     highScore = 0;
     localStorage.setItem("highScoreKey", highScore);
     $("#high-score").html("High Score : "+highScore);
